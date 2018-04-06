@@ -340,7 +340,7 @@ hysplit_trajectory <- function(lat = 49.263,
                                     "%B")), 1, 3),
               substr(year(start_time_GMT), 3, 4), ".w4"),
             ifelse(month(start_time_GMT) == 2 &
-                     leap_year == TRUE, 0,
+                     leap_year == FALSE, 0,
                    paste0(
                      "gdas1.",
                      substr(
@@ -385,7 +385,7 @@ hysplit_trajectory <- function(lat = 49.263,
               substr(year(end_time_GMT), 3, 4), ".w4"),
             ifelse(
               month(end_time_GMT) == 2 &
-                leap_year == TRUE, 0,
+                leap_year == FALSE, 0,
               paste0("gdas1.",
                      substr(tolower(format(end_time_GMT,
                                            "%B")), 1, 3),
